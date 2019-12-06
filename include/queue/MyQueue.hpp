@@ -1,6 +1,8 @@
 #ifndef MY_QUEUE_HPP
 #define MY_QUEUE_HPP
 
+//  先进先出
+
 template <typename T>
 class MyQueue
 {
@@ -11,15 +13,13 @@ public:
 
         virtual int getSize() = 0;
         virtual bool isEmpty() = 0;
-        virtual void  print() = 0;
-        int getCapacity()
-        {
-                
+        virtual void print() = 0;
+        int getCapacity(){
+
         };
 
         virtual ~MyQueue()
         {
-
         }
 };
 

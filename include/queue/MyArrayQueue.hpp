@@ -2,6 +2,9 @@
 #define MY_ARRAY_QUEUE_HPP
 #include "queue/MyQueue.hpp"
 #include "array/MyArrary.hpp"
+// 不论把数组的头部还是尾部作为队列front，都会存在O(n)的操作
+// 例如，采用数组尾部作为tail,则出队为O(n)
+
 template <typename T>
 class MyArrayQueue : public MyQueue<T>
 {

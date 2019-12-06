@@ -2,8 +2,9 @@
 #define MY_LINKED_LIST_HPP
 #include <cassert>
 #include <iostream>
-//  优点：动态存储
+//  优点：真正动态
 //  缺点：没有随机访问能力
+//  与数组不同，在头部插入为O(1)，在尾部插入为O(n)
 template <typename T>
 class MyLinkedList
 {
@@ -17,7 +18,7 @@ private:
                 MyNode *next;
         };
 
-        MyNode *dummy_head_;
+        MyNode *dummy_head_;   //  采用一个哑节点，统一了在任意位置插入和删除元素的逻辑
         int size_;
 
         MyNode *movePrevious(int index)

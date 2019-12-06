@@ -3,8 +3,7 @@
 #include "array/MyArrary.hpp"
 #include "stack/MyStack.hpp"
 
-//  可以实现O(1)的操作
-
+//  利用数组在尾部插入和删除为O(1)的时间复杂度，所以动态数组栈的复杂度为O(1)
 template <typename T>
 class MyArrayStack : public MyStack<T>
 {
@@ -45,9 +44,7 @@ public:
                 return stack_->isEmpty();
         }
 
-        /**
-     * 打印数组的所有元素
-     */
+        //打印数组的所有元素
         void print()
         {
                 std::cout << "Stack: size = " << stack_->getSize() << ", capacity = " << stack_->getCapacity() << std::endl;

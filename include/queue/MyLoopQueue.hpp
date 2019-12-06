@@ -3,7 +3,13 @@
 #include "queue/MyQueue.hpp"
 #include "array/MyArrary.hpp"
 
-//  涉及到 first ++  or last++  取%操作
+//  数组实现的循环队列，可以把所有操作为O(n)
+//  参考严蔚敏《数据结构与算法》
+//  涉及到 first ++  or last++  取%capacity操作
+//   first == last 为空
+//   (last+1)% capacity == first 为满
+//   size = (last - first + capacity) % capacity
+//   我们浪费了一个空间来判断为满的情况
 
 template <typename T>
 class MyLoopQueue : public MyQueue<T>
