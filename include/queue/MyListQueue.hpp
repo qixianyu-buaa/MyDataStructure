@@ -9,7 +9,7 @@ template <typename T>
 class MyListQueue : public MyQueue<T>
 {
 private:
-     MyLinkedList<T> * list_;
+        MyLinkedList<T> *list_;
 
 public:
         MyListQueue()
@@ -24,7 +24,7 @@ public:
 
         void enQueue(T e) // O(n)
         {
-              list_->addLast(e);
+                list_->addLast(e);
         }
         T deQueue() // O(1)
         {
@@ -32,8 +32,8 @@ public:
         }
         T getFront() // O(1)
         {
-              
-                return  list_->getFirst();
+
+                return list_->getFirst();
         }
         int getSize() // O(1)
         {

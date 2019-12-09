@@ -10,9 +10,12 @@ int main()
                 list->print();
         }
 
-        list->removeFirst();
+        int val = list->removeFirst();
+        std::cout << "remove " << val << std::endl;
         list->print();
+        
         list->removeLast();
+        std::cout << "remove " << val << std::endl;
         list->print();
 
         list->setFirst(100);

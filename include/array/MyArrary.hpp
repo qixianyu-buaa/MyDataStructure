@@ -4,16 +4,16 @@
 #include <cassert>
 
 // 数组的特点，具有随机访问的能力，并且最好应用于索引有语义的情况
-//  MyArray封装了c++中的原生数组，实现了增删改查的功能。
+// MyArray封装了c++中的原生数组，实现了增删改查的功能。
 // 此外，该数组如std::vector<>一样，也可以动态变化；值得注意的是，该类还实现了容量的缩小，
 // 为了解决复杂度震荡问题，采用了size == capacity /4 时，才把capacity/2的 lazy策略
 //  复杂度分析：
 //  addFirst : O (n)
 //  addLast: O (1)
 //  add: O(n)
-// remove: O(n)
-// removeLast: O(1)
-// remove: O(n)
+//  remove: O(n)
+//  removeLast: O(1)
+//  remove: O(n)
 //  contains: O(n)
 //  find: O(n)
 //  resize: O(n)
@@ -91,6 +91,7 @@ public:
 
                 return ret;
         }
+
         T removeFirst() // O(n)
         {
                 return remove(0);
@@ -177,6 +178,30 @@ public:
                 }
                 std::cout << "]";
         }
+
+        void swap(int i, int j)
+        {
+                assert(i >= 0 && i < size_ && j >= 0 && j < size_);
+                T t = data_[i];
+                data_[i] = data_[j];
+                data_[j] = t;
+        }
+
+        T &operator[](int index)
+        {
+                return data_[index];
+        }
+
+        void clear()
+        {
+                size_ = 0;
+        }
+
+        // bool operator< (const MyArray& rhs )
+        // {
+        //         return this
+
+        // }
 };
 
 #endif

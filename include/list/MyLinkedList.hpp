@@ -18,7 +18,7 @@ private:
                 MyNode *next;
         };
 
-        MyNode *dummy_head_;   //  采用一个哑节点，统一了在任意位置插入和删除元素的逻辑
+        MyNode *dummy_head_; //  采用一个哑节点，统一了在任意位置插入和删除元素的逻辑
         int size_;
 
         MyNode *movePrevious(int index)
