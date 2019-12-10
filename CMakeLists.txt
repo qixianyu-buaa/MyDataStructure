@@ -31,4 +31,6 @@ include_directories(include)
 # add_executable(test_heap  test/test_heap.cpp)
 
 
-add_executable(test_priority_queue  test/test_priority_queue.cpp)
+# add_executable(test_priority_queue  test/test_priority_queue.cpp)
+
+add_executable(test_seg_tree  test/test_seg_tree.cpp)
